@@ -57,7 +57,7 @@ User -
 - [ ] repo should not contain irrelevant folders/files like node_modules, build directories etc.
 - [ ] Follow the [wireframes](#wireframes) provided closely
 - [ ] Follow these steps for submission:
-  1. Clone the repository
+  1. Fork the repository
   1. Create issues and work on them in their respective branches
   1. Complete the tasks while following all instructions
   1. Create MRs and merge into main branch
