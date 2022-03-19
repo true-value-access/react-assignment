@@ -1,10 +1,18 @@
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import User from './pages/user';
+import UserList from './pages/userlist';
+
+
 
 function App() {
   return (
-    <div className="App">
-    
-    </div>
+    <Router>
+      <Routes>
+          <Route exact path="/users" element = {<UserList />} />
+          <Route exact path="/users/:userId" element = {<User />} />
+      </Routes>
+    </Router>
   );
 }
 
