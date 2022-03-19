@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import User from './pages/user';
-import UserList from './pages/userlist';
+import UserList from './pages/userList';
 
 
 
