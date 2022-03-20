@@ -29,7 +29,7 @@ tbody{
 }
 `
 
-const Table = ({ users, handleUserData }) => {
+const Table = ({ data, handleUserData }) => {
     return (
         <TableData >
             <thead>
@@ -43,7 +43,7 @@ const Table = ({ users, handleUserData }) => {
                 </tr>
             </thead>
             <tbody>
-                {users[0].payload && users[0].payload.map((itm) => {
+                {data && data.map((itm) => {
                     return (
                         <tr key={itm.id}>
                             <td>
