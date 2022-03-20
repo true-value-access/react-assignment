@@ -1,9 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import SingleUser from './Components/singleUserpage';
 import Users from './Components/TableWrapper';
-
-
 
 function App() {
   const [userData,setUserData] = React.useState([]);
