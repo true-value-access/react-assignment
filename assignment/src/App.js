@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, Link } from "react-router-dom";
+import SingleUser from './Components/singleUserpage';
+import Users from './Components/TableWrapper';
+
+
 
 function App() {
+  const [userData,setUserData] = React.useState([]);
+  const handleUserData =(data)=>{
+    setUserData(data)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/users/:id' element={<SingleUser data={userData} />} />
+        <Route path='/users'element={<Users handleUserData={handleUserData} />} /> 
+        <Route exact path ='/' element={<Navigate to ='/users' />} />
+      </Routes>
+    </Router>
   );
 }
 
