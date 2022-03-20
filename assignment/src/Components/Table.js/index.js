@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import {BsArrowDownUp } from 'react-icons/bs'
 
 const TableData = styled.table`
 border:1px solid black;
 thead{    
     font-weight: 700;
-    background: lightgrey;
+    background: rgb(230, 230, 230);
     tr{
         th{
             padding:1rem;
@@ -18,7 +19,7 @@ tbody{
     tr{
         td{
             padding:1rem;
-            border-bottom: 1px solid lightgrey;
+            border-bottom: 1px solid rgb(230, 230, 230);
         }
     }
     .username{
@@ -33,11 +34,11 @@ const Table = ({ users, handleUserData }) => {
         <TableData >
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Age</th>
-                    <th>Email</th>
-                    <th>Website</th>
+                    <th>First Name  <BsArrowDownUp /></th>
+                    <th>Last Name  <BsArrowDownUp/></th>
+                    <th>Age  <BsArrowDownUp/></th>
+                    <th>Email  <BsArrowDownUp/></th>
+                    <th>Website  <BsArrowDownUp/></th>
                     
                 </tr>
             </thead>
@@ -48,7 +49,7 @@ const Table = ({ users, handleUserData }) => {
                             <td>
                                 <Link to={`/users/${itm.id}`} className='username' >
                                     <div onClick={()=>handleUserData(itm)}>
-                                        {itm.first_name}
+                                        {itm.first_name} 
                                     </div>
                                 </Link>
                             </td>

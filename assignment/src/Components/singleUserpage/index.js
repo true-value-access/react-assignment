@@ -1,8 +1,9 @@
+import React from "react";
 import Title from "./Title"
 import styled from 'styled-components'
-import { Navigate } from "react-router-dom"
+import { Navigate,useNavigate } from "react-router-dom"
 import {AiOutlineArrowLeft as BackIcon } from 'react-icons/ai';
-import { useNavigate } from "react-router";
+
 
 const UserData = styled.div`
 width:90%;
@@ -25,12 +26,12 @@ margin:auto;
 const SingleUser = ({ data }) => {
     const navigate = useNavigate()
     const handleNavigate =()=>{
-        navigate('/')
+        navigate('/users')
     }
     return (
         <>
             {
-                data ?
+                data.first_name !== undefined ?
                     <UserData>
                         <div className='userHeader'>
                             <div onClick={handleNavigate} ><BackIcon size='2.5rem' /></div>
