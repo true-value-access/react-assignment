@@ -44,6 +44,7 @@ export default function UserList() {
             el.last_name.toLowerCase().includes(query.toLowerCase())
         );
         setUsers(queryResult);
+        setCurrPage(1);
     }
 
     const handleControl = (type) => {
@@ -55,17 +56,29 @@ export default function UserList() {
         }
     }
 
+    const sortData = (type,prop) => {
+        let sorted = [];
+        console.log('here', prop,type)
+        if(prop === 'age') {
+            if(type === 'increase') 
+                sorted = originalData.sort((a,b) => a[prop] - b[prop])
+            else
+                sorted = originalData.sort((a,b) => b[prop] - a[prop])
+        }
+        console.log(sorted)
+        setUsers(sorted);
+    }
     
 
    
 
   return (
-    <div>
+    <div className='container'>
        {loading ? <p>loading...</p> : 
-        <div>
-            <h1>Users</h1>
+        <div className='data-container'>
+            <h1 className='primary'>Users</h1>
             <Search handleSearch={handleSearch}  />
-            <UserTable data = {currentTableData} />
+            <UserTable data = {currentTableData} sortData = {sortData} />
             <Pagination 
                 currPage = {currPage}
                 handleControl = {handleControl} 

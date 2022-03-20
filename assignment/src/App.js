@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './App.css';
+import './styles/styles.scss';
 import User from './pages/user';
 import UserList from './pages/userList';
 
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
           <Route exact path="/users" element = {<UserList />} />
-          <Route exact path="/users/:userId" element = {<User />} />
+          <Route exact path="/user/:userId" element = {<User />} />
       </Routes>
     </Router>
   );

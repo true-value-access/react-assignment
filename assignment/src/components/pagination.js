@@ -12,8 +12,8 @@ export default function Pagination({currPage, totalUsers, handleControl, pageLim
     if(totalUsers < pageLimit) return null;
 
   return (
-    <div>
-        <div>
+    <div className='pagination_container'>
+        <div className='pagination_list'>
              <button 
                 onClick={() => handleControl("prev")}
                 className = {cx('btn',{disabled: currPage === 0})}

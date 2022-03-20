@@ -1,0 +1,129 @@
+.container {
+  padding: 10rem 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.data-container {
+  width: 80%;
+  //   border: 2px solid red;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.primary {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.input {
+  height: 3.5rem;
+  width: 40%;
+  display: inline-block;
+  padding: 0 1rem;
+  &_container {
+    // border: 1px solid saddlebrown;
+    margin-bottom: 1.5rem;
+  }
+  &:focus {
+    box-shadow: 0 0 2px rgba($color: #000000, $alpha: 8);
+    border: none;
+    outline: none;
+  }
+}
+
+table {
+  //   border: 1px solid red;
+  margin-bottom: 1.5rem;
+}
+thead {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+tr {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+th {
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+.thead {
+  display: flex;
+  align-items: center;
+}
+.icons {
+  position: relative;
+  margin-left: 0.5rem;
+  padding-top: 2px;
+}
+.icon {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  right: 0;
+  display: inline-block;
+
+  &_up {
+    margin-bottom: 0.5rem;
+  }
+  &_down {
+    position: absolute;
+  }
+}
+td {
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.pagination {
+  &_container {
+    // border: 1px solid saddlebrown;
+    display: flex;
+    justify-content: center;
+  }
+  &_list {
+    display: flex;
+
+    & > * {
+      padding: 1rem 1.4rem;
+      background-color: white;
+      border: none;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
+
+    button:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.active {
+  border: 1px solid blue;
+}
+
+// ------------------------------------------ User Result --------------------------------
+.user {
+  &_container {
+    padding: 2rem;
+    margin: 6rem auto;
+    width: 80%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  }
+  &_name {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  &_details {
+    padding: 2rem;
+    li {
+      font-size: 1.6rem;
+      padding: 1rem 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

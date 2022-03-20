@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Search({handleSearch}) {
   return (
-    <div>
+    <div className='input_container'>
         <input 
             className='input'
             type = "text"
