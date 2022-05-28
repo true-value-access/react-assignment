@@ -2,7 +2,7 @@ import "./styles/App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Users from "./components/Users";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import UserDetails from "./components/UserDetails";
 
 function App() {
@@ -38,6 +38,12 @@ function App() {
         <Routes>
           <Route
             path="/"
+            exact
+            element={<Link to="/users">Users</Link>}
+          ></Route>
+          <Route
+            path="/users"
+            exact
             element={
               <Users
                 allUsers={users}
