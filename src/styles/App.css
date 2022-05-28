@@ -1,0 +1,57 @@
+.user-first-name a{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+
+.active-page{
+    border: 1px solid blue;
+    
+}
+.page-number-margin{
+    margin-right: 8px;
+}
+.detail-row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.heading{
+    margin-bottom: 10px;
+}
+.container{
+    background-color: white;
+    padding: 10px;
+}
+.back{
+    text-align: end;
+    color: black;
+}
+
+.search-container{
+    margin-bottom: 10px;
+}
+.search-container .search-input{
+    padding: 5px;
+    border: 1px solid grey;
+    border-right: none;
+    width: 350px;
+}
+.search-container .search-input:focus{
+    outline: none;
+}
+.search-container .search-btn{
+    background-color: white;
+    padding: 5px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.details-container{
+    margin-top: 20px;
+}
+.table-header{
+    background-color: #f8f8f8;
+}
