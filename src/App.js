@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="container details-container">
         {console.log(users)}
         <Routes>
